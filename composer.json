@@ -1,0 +1,34 @@
+{
+  "name": "rareform/pingcrm",
+  "version": "1.0.0",
+  "description": "PingCRM demo showcasing Inertia.js for Craft CMS",
+  "license": "Unlicense",
+  "require": {
+    "rareform/craft-inertia": "^1.0.0-alpha.1",
+    "craftcms/cms": "^5.0.0",
+    "craftcms/feed-me": "^6.5.0",
+    "nystudio107/craft-vite": "^5.0",
+    "vlucas/phpdotenv": "^5.4.0"
+  },
+  "require-dev": {
+    "craftcms/generator": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.3.0"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

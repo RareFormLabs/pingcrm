@@ -1,0 +1,163 @@
+color: null
+fieldLayouts:
+  6a27c5d3-625e-40de-8087-3241367a8314:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-10-28T00:05:04+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: Name
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6e56fe6d-83ea-45cc-bb50-88fb85d7a6e5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-28T00:19:07+00:00'
+            elementCondition: null
+            fieldUid: 9ab758ee-28e3-4dcb-b93f-4b25017ad86a # Plain Text
+            handle: email
+            includeInCards: false
+            instructions: null
+            label: Email
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5af15e02-3026-48e0-9dc4-7107f1c25209
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-28T00:19:07+00:00'
+            elementCondition: null
+            fieldUid: 9ab758ee-28e3-4dcb-b93f-4b25017ad86a # Plain Text
+            handle: phone
+            includeInCards: false
+            instructions: null
+            label: Phone
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4389ade0-fad9-48b7-8e6c-a742b0be7644
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-28T00:19:07+00:00'
+            elementCondition: null
+            fieldUid: 9ab758ee-28e3-4dcb-b93f-4b25017ad86a # Plain Text
+            handle: address
+            includeInCards: false
+            instructions: null
+            label: Address
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e16f0097-4e98-44d2-b1b0-c968aa25d473
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-28T00:16:27+00:00'
+            elementCondition: null
+            fieldUid: 9ab758ee-28e3-4dcb-b93f-4b25017ad86a # Plain Text
+            handle: city
+            includeInCards: false
+            instructions: null
+            label: City
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c8ede0ca-f9ab-413a-a8f7-480247a08371
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-28T00:19:07+00:00'
+            elementCondition: null
+            fieldUid: 9ab758ee-28e3-4dcb-b93f-4b25017ad86a # Plain Text
+            handle: state
+            includeInCards: false
+            instructions: null
+            label: State
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae1bdba1-dc7c-472e-996c-cc08418e910e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-28T00:19:07+00:00'
+            elementCondition: null
+            fieldUid: 9ab758ee-28e3-4dcb-b93f-4b25017ad86a # Plain Text
+            handle: country
+            includeInCards: false
+            instructions: null
+            label: Country
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8645b614-2f64-4b0a-bbc8-97c801ea0b03
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-28T00:19:07+00:00'
+            elementCondition: null
+            fieldUid: 9ab758ee-28e3-4dcb-b93f-4b25017ad86a # Plain Text
+            handle: postalCode
+            includeInCards: false
+            instructions: null
+            label: 'Postal Code'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6728cc31-e71a-4e77-b8dd-634ed1563277
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1ffa43c0-6c89-48de-b2ad-dbaf9845fb15
+        userCondition: null
+handle: organizations
+hasTitleField: true
+icon: null
+name: Organizations
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

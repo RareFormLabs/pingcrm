@@ -1,0 +1,51 @@
+{% requireLogin %}
+
+{% set search = craft.app.request.param('search') ?? null %}
+{% set organizations = craft.entries.section('organizations').search(search).limit(10) %}
+{% set trashed = craft.app.request.param('trashed') %}
+
+{% if trashed == 'true' %}
+  {% set organizations = organizations.status('disabled') %}
+{% endif %}
+
+{% paginate organizations as pageInfo, pageEntries %}
+
+{% set links = [{
+  url: pageInfo.prevUrl,
+  label: '« Previous',
+  active: pageInfo.currentPage == 1
+}] %}
+
+{% for page in 1..pageInfo.totalPages %}
+  {% set links = links|merge([{
+    url: pageInfo.getPageUrl(page),
+    label: page,
+    active: page == pageInfo.currentPage
+  }]) %}
+{% endfor %}
+
+{% set links = links|merge([{
+  url: pageInfo.nextUrl,
+  label: 'Next »',
+  active: pageInfo.currentPage == pageInfo.totalPages
+}]) %}
+
+{% set pageEntries = pageEntries|map(organization => {
+  id: organization.id,
+  title: organization.title,
+  city: organization.city,
+  phone: organization.phone,
+}) %}
+
+{% set props = {
+  filters: {
+    search: null,
+    trashed: false,
+  },
+  organizations: {
+    data: pageEntries,
+    links: links
+  }
+} %}
+
+{{ inertia('Organizations/Index', props) }}

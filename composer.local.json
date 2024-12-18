@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "COMPOSER=composer.local.json composer install",
+    "dev-update": "COMPOSER=composer.local.json composer update"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../inertia",
+      "options": {
+        "symlink": true
+      }
+    }
+  ]
+}

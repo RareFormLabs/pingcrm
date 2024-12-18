@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  - 9bda4a7b-315e-4d44-bbea-e6a467f3857e # Contacts
+handle: contacts
+maxAuthors: 1
+name: Contacts
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  59802d39-4976-4231-8d49-34680e3388cc: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: contacts/_entry.twig
+    uriFormat: 'contacts/{id}/edit'
+type: channel

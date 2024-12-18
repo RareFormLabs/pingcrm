@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  - 391f5e09-3cd9-45bc-a28a-3e100bc41f63 # Organizations
+handle: organizations
+maxAuthors: 1
+name: Organizations
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  59802d39-4976-4231-8d49-34680e3388cc: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: organizations/_entry.twig
+    uriFormat: 'organizations/{id}/edit'
+type: channel

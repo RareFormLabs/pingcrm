@@ -1,0 +1,30 @@
+{% requireLogin %}
+
+{% set props = [] %}
+{% if element is defined and element.hasErrors %}
+  {% set props = props|merge({ errors: element.getErrors() }) %}
+{% endif %}
+
+{% set props = props|merge({ contact: {
+  firstName: element.firstName,
+  lastName: element.lastName,
+  city: element.city,
+  phone: element.phone,
+  organization: element.organization.select('id').column()|first,
+  state: element.state,
+  postalCode: element.postalCode,
+  email: element.email,
+  country: element.country,
+  address: element.address,
+  id: element.id,
+  status: element.status,
+}}) %}
+
+{% set props = props|merge({
+  organizations: craft.entries.section('organizations').all()|map(organization => {
+      value: organization.id,
+      label: organization.title,
+  }),
+}) %}
+
+{{ inertia('Contacts/Edit', props) }}

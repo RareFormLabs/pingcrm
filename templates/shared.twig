@@ -1,0 +1,21 @@
+{% set shareObject = {
+   flashes: craft.app.session.getAllFlashes(true),
+   csrfTokenValue: craft.app.request.csrfToken,
+   csrfTokenName: craft.app.config.general.csrfTokenName
+} %}
+
+{% if currentUser %}
+  {% set user = {
+    id: currentUser.id,
+    username: currentUser.username,
+    fullName: currentUser.fullName,
+    firstName: currentUser.firstName,
+    lastName: currentUser.lastName,
+    email: currentUser.email,
+    isOwner: currentUser.isOwner.value,
+    profile_photo_url: currentUser.photo ? currentUser.photo.url : null,
+  } %}
+  {% set shareObject = shareObject|merge({currentUser: user}) %}
+{% endif %}
+
+{{ inertiaShare(shareObject) }}

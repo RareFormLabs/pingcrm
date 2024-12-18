@@ -1,0 +1,15 @@
+{% requireLogin %}
+
+{% set props = { redirect: '/contacts'|hash } %}
+{% if element is defined and element.hasErrors %}
+  {% set props = { errors: element.getErrors() } %}
+{% endif %}
+
+{% set props = props|merge({
+  organizations: craft.entries.section('organizations').all()|map(organization => {
+      value: organization.id,
+      label: organization.title,
+  }),
+}) %}
+
+{{ inertia('Contacts/Create', props) }}

@@ -1,0 +1,10 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+/storage
+/node_modules
+/web/cache
+/web/cpresources
+/web/assets/transforms
+/config/Env.php

@@ -1,0 +1,10 @@
+{
+  "buttons": ["bold", "italic","ul","link"],
+  "pastePlainText": true,
+  "pasteImages": false,
+  "pasteLinks": false,
+  "air": false,
+  "autoparse": false,
+  "shortcuts": false,
+  "toolbarFixed": true
+}

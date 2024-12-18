@@ -1,0 +1,31 @@
+{
+  "name": "PingCRM",
+  "version": "1.0.0",
+  "description": "PingCRM demo showcasing Inertia.js for Craft CMS",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "up": "ncu --interactive -p bun"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/compiler-sfc": "^3.5.12",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.7",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.10",
+    "vue": "^3.5.12"
+  },
+  "dependencies": {
+    "@inertiajs/vue3": "^1.2.0",
+    "@popperjs/core": "^2.11.8"
+  }
+}

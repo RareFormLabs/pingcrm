@@ -1,0 +1,10 @@
+{
+  "buttons": ["bold", "italic", "unorderedlist", "orderedlist", "link"],
+  "plugins": ["fullscreen"],
+  "linkNewTab": true,
+  "toolbarFixed": true,
+  "pastePlainText": true,
+  "pasteImages": false,
+  "pasteLinks": false,
+  "autoparse": false
+}

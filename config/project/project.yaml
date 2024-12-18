@@ -1,0 +1,104 @@
+dateModified: 1733684811
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:05b3fc5c-6060-4d07-94cf-d7d9c1c39643' # Organizations
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+        - dateUpdated
+        - slug
+        - authors
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:c5a20e44-5140-44c3-9791-80ffb13e8cb7' # Contacts
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+        - 'fieldInstance:b1862530-0573-4dba-ad1d-998b4f9162e0'
+        - 'fieldInstance:99ce616b-2419-482c-90ee-674a58ebee17'
+        - 'fieldInstance:41087ebc-5a37-463d-b1f3-158eb308c133'
+        - 'fieldInstance:32052a73-2c0e-43db-b16f-3900e85a12dd'
+        - 'fieldInstance:af127e81-48d2-4f14-9f45-ef8bef767257'
+      type: native
+email:
+  fromEmail: chase@ncwa.net
+  fromName: English
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: false
+    name: images
+    settings:
+      path: '@webroot/images'
+    type: craft\fs\Local
+    url: null
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+meta:
+  __names__:
+    05b3fc5c-6060-4d07-94cf-d7d9c1c39643: Organizations # Organizations
+    9ab758ee-28e3-4dcb-b93f-4b25017ad86a: 'Plain Text' # Plain Text
+    9bda4a7b-315e-4d44-bbea-e6a467f3857e: Contacts # Contacts
+    391f5e09-3cd9-45bc-a28a-3e100bc41f63: Organizations # Organizations
+    0555ac1c-c0be-4bb5-89a3-2c8dca635ec3: 'Site Info' # Site Info
+    36560a4e-7cf7-4b42-8f5c-fbb2fe8475ca: 'Boolean Dropdown' # Boolean Dropdown
+    59802d39-4976-4231-8d49-34680e3388cc: English # English
+    b675bf27-2247-4005-a999-66ef1a5e8ba7: English # English
+    c5a20e44-5140-44c3-9791-80ffb13e8cb7: Contacts # Contacts
+    fcad5a35-638c-4695-a5ad-de177465301f: 'Organization Entry' # Organization Entry
+plugins:
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.1
+  inertia:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: PingCRM
+  retryDuration: null
+  schemaVersion: 5.5.0.0
+  timeZone: America/Los_Angeles

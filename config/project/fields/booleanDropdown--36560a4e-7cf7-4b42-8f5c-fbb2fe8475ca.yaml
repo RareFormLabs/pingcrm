@@ -1,0 +1,33 @@
+columnSuffix: null
+handle: booleanDropdown
+instructions: null
+name: 'Boolean Dropdown'
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Yes'
+        -
+          - value
+          - 'true'
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'No'
+        -
+          - value
+          - 'false'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

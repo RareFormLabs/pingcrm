@@ -1,0 +1,11 @@
+fieldLayouts:
+  92c2ba63-861b-41be-8766-5b06a08ffaee:
+    tabs:
+      -
+        elementCondition: null
+        name: main
+        uid: fbd34eea-158d-46b0-8179-eebbf1ae3277
+        userCondition: null
+handle: siteInfo
+name: 'Site Info'
+sortOrder: 1

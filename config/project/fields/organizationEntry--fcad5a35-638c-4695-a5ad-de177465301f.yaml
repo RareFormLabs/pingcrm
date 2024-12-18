@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: organizationEntry
+instructions: null
+name: 'Organization Entry'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:05b3fc5c-6060-4d07-94cf-d7d9c1c39643' # Organizations
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

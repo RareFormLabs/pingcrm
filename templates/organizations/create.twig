@@ -1,0 +1,8 @@
+{% requireLogin %}
+
+{% set props = [] %}
+{% if element is defined and element.hasErrors %}
+  {% set props = { errors: element.getErrors() } %}
+{% endif %}
+
+{{ inertia('Organizations/Create', props) }}
