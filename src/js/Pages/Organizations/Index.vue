@@ -92,10 +92,8 @@
 <script>
 import { Head, Link } from "@inertiajs/vue3";
 import Icon from "@/Shared/Icon.vue";
-import pickBy from "lodash/pickBy";
+import { pickBy, mapValues, throttle } from "lodash";
 import Layout from "@/Shared/Layout.vue";
-import throttle from "lodash/throttle";
-import mapValues from "lodash/mapValues";
 import Pagination from "@/Shared/Pagination.vue";
 import SearchFilter from "@/Shared/SearchFilter.vue";
 
