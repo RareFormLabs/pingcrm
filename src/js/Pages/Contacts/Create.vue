@@ -119,6 +119,10 @@ const props = defineProps({
 });
 
 const form = useForm({
+  action: "entries/save-entry",
+  sectionId: 3,
+  redirect: props.redirect,
+  [props.csrfTokenName]: props.csrfTokenValue,
   fields: {
     firstName: "",
     lastName: "",
@@ -134,16 +138,8 @@ const form = useForm({
 });
 
 const store = () => {
-  form
-    .transform((data) => ({
-      ...data,
-      action: "entries/save-entry",
-      sectionId: 3,
-      redirect: props.redirect,
-      [props.csrfTokenName]: props.csrfTokenValue,
-    }))
-    .post("", {
-      forceFormData: true,
-    });
+  form.post("", {
+    forceFormData: true,
+  });
 };
 </script>

@@ -179,7 +179,8 @@ defineOptions({
 
 const props = defineProps({
   organization: Object,
-  csrf: String,
+  csrfTokenName: String,
+  csrfTokenValue: String,
   flashes: Array,
   contacts: Array,
 });
@@ -187,6 +188,9 @@ const props = defineProps({
 const { csrf, organization, flashes } = toRefs(props);
 const form = useForm({
   title: organization.value.title,
+  [props.csrfTokenName]: props.csrfTokenValue,
+  entryId: organization.value.id,
+  action: "entries/save-entry",
   fields: {
     postalCode: organization.value.postalCode,
     email: organization.value.email,
@@ -196,27 +200,22 @@ const form = useForm({
     state: organization.value.state,
     country: organization.value.country,
   },
-  entryId: organization.value.id,
-  CRAFT_CSRF_TOKEN: csrf.value,
 });
 
 const update = async () => {
-  form
-    .transform((data) => ({
-      ...data,
-      action: "entries/save-entry",
-    }))
-    .post("", {
-      forceFormData: true,
-    });
+  form.post("", {
+    forceFormData: true,
+  });
 };
 
 const destroy = () => {
   if (confirm("Are you sure you want to delete this organization?")) {
+    // Usually, to delete an element, you'd want to set "elements/delete" as the action,
+    // but since we're demoing a soft-delete, and need access to the soft-deleted element
+    // on the frontend, we'll set the status to "disabled" instead.
     form
       .transform((data) => ({
         ...data,
-        action: "entries/save-entry",
         enabled: false,
       }))
       .post("", {
@@ -230,7 +229,6 @@ const restore = () => {
     form
       .transform((data) => ({
         ...data,
-        action: "entries/save-entry",
         enabled: true,
       }))
       .post("", {
