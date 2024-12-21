@@ -134,6 +134,7 @@ export default {
       handler: throttle(function () {
         this.$inertia.get("/contacts", pickBy(this.form), {
           preserveState: true,
+          only: ["contacts"],
         });
       }, 150),
     },
