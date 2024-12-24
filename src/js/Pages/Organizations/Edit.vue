@@ -164,13 +164,14 @@
 
 <script setup>
 import { defineComponent, toRefs, ref, reactive } from "vue";
-import { Head, Link, router, useForm } from "@inertiajs/vue3";
+import { Head, Link, router } from "@inertiajs/vue3";
 import Icon from "@/Shared/Icon.vue";
 import Layout from "@/Shared/Layout.vue";
 import TextInput from "@/Shared/TextInput.vue";
 import SelectInput from "@/Shared/SelectInput.vue";
 import LoadingButton from "@/Shared/LoadingButton.vue";
 import TrashedMessage from "@/Shared/TrashedMessage.vue";
+import useForm from "inertia-helper";
 
 defineOptions({
   layout: Layout,
@@ -179,33 +180,27 @@ defineOptions({
 
 const props = defineProps({
   organization: Object,
-  csrfTokenName: String,
-  csrfTokenValue: String,
   flashes: Array,
   contacts: Array,
 });
 
 const { csrf, organization, flashes } = toRefs(props);
 const form = useForm({
-  title: organization.value.title,
-  [props.csrfTokenName]: props.csrfTokenValue,
-  entryId: organization.value.id,
-  action: "entries/save-entry",
+  title: organization?.value?.title,
+  entryId: organization?.value?.id,
   fields: {
-    postalCode: organization.value.postalCode,
-    email: organization.value.email,
-    phone: organization.value.phone,
-    address: organization.value.address,
-    city: organization.value.city,
-    state: organization.value.state,
-    country: organization.value.country,
+    postalCode: organization?.value?.postalCode,
+    email: organization?.value?.email,
+    phone: organization?.value?.phone,
+    address: organization?.value?.address,
+    city: organization?.value?.city,
+    state: organization?.value?.state,
+    country: organization?.value?.country,
   },
 });
 
 const update = async () => {
-  form.post("", {
-    forceFormData: true,
-  });
+  form.post("entries/save-entry");
 };
 
 const destroy = () => {
@@ -218,9 +213,7 @@ const destroy = () => {
         ...data,
         enabled: false,
       }))
-      .post("", {
-        forceFormData: true,
-      });
+      .post("entries/save-entry");
   }
 };
 
@@ -231,9 +224,7 @@ const restore = () => {
         ...data,
         enabled: true,
       }))
-      .post("", {
-        forceFormData: true,
-      });
+      .post("entries/save-entry");
   }
 };
 </script>

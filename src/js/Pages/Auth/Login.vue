@@ -50,10 +50,11 @@
 </template>
 
 <script setup>
-import { Head, useForm } from "@inertiajs/vue3";
+import { Head } from "@inertiajs/vue3";
 import Logo from "@/Shared/Logo.vue";
 import TextInput from "@/Shared/TextInput.vue";
 import LoadingButton from "@/Shared/LoadingButton.vue";
+import useForm from "inertia-helper";
 
 const props = defineProps({
   csrfTokenValue: String,
@@ -62,7 +63,6 @@ const props = defineProps({
 });
 
 const form = useForm({
-  [props.csrfTokenName]: props.csrfTokenValue,
   loginName: "johndoe@example.com",
   password: "secret",
   rememberMe: false,
@@ -70,13 +70,6 @@ const form = useForm({
 });
 
 const login = () => {
-  form
-    .transform((data) => ({
-      ...data,
-      action: "users/login",
-    }))
-    .post("", {
-      forceFormData: true,
-    });
+  form.post("users/login");
 };
 </script>

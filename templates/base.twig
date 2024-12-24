@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ craft.app.language }}" class="h-full bg-gray-100">
     <head>
+        <meta csrf name="{{ craft.app.config.general.csrfTokenName }}" content="{{ craft.app.request.csrfToken }}">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{{ siteName }}</title>
 

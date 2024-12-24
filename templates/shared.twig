@@ -1,7 +1,5 @@
 {% set shareObject = {
-   flashes: craft.app.session.getAllFlashes(true),
-   csrfTokenValue: craft.app.request.csrfToken,
-   csrfTokenName: craft.app.config.general.csrfTokenName
+   flashes: craft.app.session.getAllFlashes(true)
 } %}
 
 {% if currentUser %}
