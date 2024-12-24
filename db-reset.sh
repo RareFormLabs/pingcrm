@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your .env file
-ENV_FILE=".env"
+ENV_FILE="/home/ploi/pingcrm.rareformlabs.com/.env"
 
 # Load variables from .env file
 if [ -f $ENV_FILE ]; then
@@ -18,10 +18,10 @@ if [ -z "$CRAFT_DB_USER" ] || [ -z "$CRAFT_DB_PASSWORD" ] || [ -z "$CRAFT_DB_DAT
 fi
 
 # Path to the backup file
-BACKUP_FILE="db-seed/pingcrm.sql"
+BACKUP_FILE="/home/ploi/pingcrm.rareformlabs.com/db-seed/pingcrm.sql"
 
 # Restore the database
 mysql --host=127.0.0.1 -u $CRAFT_DB_USER -p$CRAFT_DB_PASSWORD $CRAFT_DB_DATABASE < $BACKUP_FILE
 
 # Log the reset action
-echo "Database reset completed at $(date)" >> storage/logs/dbreset.log
+echo "Database reset completed at $(date)" >> /home/ploi/pingcrm.rareformlabs.com/storage/logs/dbreset.log
