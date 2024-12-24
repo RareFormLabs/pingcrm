@@ -9,3 +9,4 @@
 /web/assets/transforms
 /config/Env.php
 /web/dist
+/db-reset.sh
