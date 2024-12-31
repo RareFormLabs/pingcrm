@@ -525,12 +525,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "85c87d01d9163e937debe1bf74ac53b1540802e5"
+                "reference": "b1e323bd8935be2cdbe64e880859a484fbfe216a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/85c87d01d9163e937debe1bf74ac53b1540802e5",
-                "reference": "85c87d01d9163e937debe1bf74ac53b1540802e5",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/b1e323bd8935be2cdbe64e880859a484fbfe216a",
+                "reference": "b1e323bd8935be2cdbe64e880859a484fbfe216a",
                 "shasum": ""
             },
             "require": {
@@ -644,7 +644,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-12-17T18:09:56+00:00"
+            "time": "2024-12-19T17:38:43+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -1182,16 +1182,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "4.0.2",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "ebaaf5be6c0286928352e054f2d5125608e5405e"
+                "reference": "b115554301161fa21467629f1e1391c1936de517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ebaaf5be6c0286928352e054f2d5125608e5405e",
-                "reference": "ebaaf5be6c0286928352e054f2d5125608e5405e",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b115554301161fa21467629f1e1391c1936de517",
+                "reference": "b115554301161fa21467629f1e1391c1936de517",
                 "shasum": ""
             },
             "require": {
@@ -1237,7 +1237,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/4.0.2"
+                "source": "https://github.com/egulias/EmailValidator/tree/4.0.3"
             },
             "funding": [
                 {
@@ -1245,7 +1245,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-06T06:47:41+00:00"
+            "time": "2024-12-27T00:36:43+00:00"
         },
         {
             "name": "elvanto/litemoji",
@@ -2661,16 +2661,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.8.2",
+            "version": "3.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "e1268cdbc486d97ce23fef2c666dc3c6b6de9947"
+                "reference": "129700ed449b1f02d70272d2ac802357c8c30c58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/e1268cdbc486d97ce23fef2c666dc3c6b6de9947",
-                "reference": "e1268cdbc486d97ce23fef2c666dc3c6b6de9947",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/129700ed449b1f02d70272d2ac802357c8c30c58",
+                "reference": "129700ed449b1f02d70272d2ac802357c8c30c58",
                 "shasum": ""
             },
             "require": {
@@ -2702,10 +2702,6 @@
             ],
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev",
-                    "dev-2.x": "2.x-dev"
-                },
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
@@ -2715,6 +2711,10 @@
                     "includes": [
                         "extension.neon"
                     ]
+                },
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev",
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
@@ -2763,7 +2763,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-07T17:46:48+00:00"
+            "time": "2024-12-27T09:25:35+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
@@ -4010,16 +4010,16 @@
         },
         {
             "name": "rareform/craft-inertia",
-            "version": "1.0.0-alpha.1",
+            "version": "1.0.0-alpha.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RareFormLabs/craft-inertia.git",
-                "reference": "d59841c460676829aa64d044b3224192b69cb05b"
+                "reference": "7e718ca51300acd9ff57d5f118649e4e6e2bbe76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RareFormLabs/craft-inertia/zipball/d59841c460676829aa64d044b3224192b69cb05b",
-                "reference": "d59841c460676829aa64d044b3224192b69cb05b",
+                "url": "https://api.github.com/repos/RareFormLabs/craft-inertia/zipball/7e718ca51300acd9ff57d5f118649e4e6e2bbe76",
+                "reference": "7e718ca51300acd9ff57d5f118649e4e6e2bbe76",
                 "shasum": ""
             },
             "require": {
@@ -4048,9 +4048,9 @@
             "description": "Inertia.js adapter for Craft CMS",
             "support": {
                 "issues": "https://github.com/RareFormLabs/craft-inertia/issues",
-                "source": "https://github.com/RareFormLabs/craft-inertia/tree/1.0.0-alpha.1"
+                "source": "https://github.com/RareFormLabs/craft-inertia/tree/1.0.0-alpha.3"
             },
-            "time": "2024-12-18T16:41:06+00:00"
+            "time": "2024-12-30T23:17:14+00:00"
         },
         {
             "name": "samdark/yii2-psr-log-target",
@@ -4520,12 +4520,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -4668,12 +4668,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -6324,12 +6324,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -6584,12 +6584,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -7933,8 +7933,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "web-auth/webauthn-framework",
-                    "url": "https://github.com/web-auth/webauthn-framework"
+                    "url": "https://github.com/web-auth/webauthn-framework",
+                    "name": "web-auth/webauthn-framework"
                 }
             },
             "autoload": {
