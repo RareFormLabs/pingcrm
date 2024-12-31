@@ -117,12 +117,13 @@
 </template>
 
 <script setup>
-import { Head, Link, useForm } from "@inertiajs/vue3";
+import { Head, Link } from "@inertiajs/vue3";
 import Layout from "@/Shared/Layout.vue";
 import TextInput from "@/Shared/TextInput.vue";
 import SelectInput from "@/Shared/SelectInput.vue";
 import LoadingButton from "@/Shared/LoadingButton.vue";
 import TrashedMessage from "@/Shared/TrashedMessage.vue";
+import useForm from "inertia-helper";
 
 defineOptions({
   layout: Layout,
@@ -132,13 +133,10 @@ defineOptions({
 const props = defineProps({
   contact: Object,
   organizations: Array,
-  csrfTokenName: String,
-  csrfTokenValue: String,
 });
 
 const form = useForm({
   entryId: props.contact.id,
-  [props.csrfTokenName]: props.csrfTokenValue,
   action: "entries/save-entry",
   fields: {
     firstName: props.contact.firstName,
@@ -155,9 +153,7 @@ const form = useForm({
 });
 
 const update = async () => {
-  form.post("", {
-    forceFormData: true,
-  });
+  form.post("entries/save-entry");
 };
 
 const destroy = () => {
