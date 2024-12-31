@@ -79,22 +79,22 @@
 </template>
 
 <script setup>
-import { defineComponent, toRefs, ref, reactive } from "vue";
 import { Head, Link, router, useForm } from "@inertiajs/vue3";
 import Layout from "@/Shared/Layout.vue";
 import TextInput from "@/Shared/TextInput.vue";
 import SelectInput from "@/Shared/SelectInput.vue";
 import LoadingButton from "@/Shared/LoadingButton.vue";
 
-const props = defineProps({
-  csrf: String,
-});
 defineOptions({
   layout: Layout,
   remember: "form",
 });
 
-const { csrf } = toRefs(props);
+const props = defineProps({
+  csrfTokenName: String,
+  csrfTokenValue: String,
+});
+
 const form = useForm({
   title: null,
   fields: {
@@ -106,7 +106,7 @@ const form = useForm({
     country: null,
     postalCode: null,
   },
-  CRAFT_CSRF_TOKEN: csrf.value,
+  [props.csrfTokenName]: props.csrfTokenValue,
   action: "entries/save-entry",
   sectionId: 2,
   typeId: 2,
