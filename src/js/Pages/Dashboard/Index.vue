@@ -20,7 +20,7 @@
       works.
     </p>
     <p class="mb-8 leading-normal">
-      The database is reset every hour, so feel free to play around as much as
+      The database is reset every day, so feel free to play around as much as
       you like, but please be mindful of others.
     </p>
   </div>
