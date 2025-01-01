@@ -25,8 +25,8 @@
             class="pb-8 pr-6 w-full lg:w-1/2"
             label="Owner"
           >
-            <option :value="true">Yes</option>
-            <option :value="false">No</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
           </select-input>
           <text-input
             v-model="currentUser.email"
