@@ -1,0 +1,15 @@
+{% if currentUser %}
+  {% cache using key "#{currentUser.fullName} - #{currentUser.isOwner}" %}
+  {% set user = {
+      id: currentUser.id,
+      username: currentUser.username,
+      fullName: currentUser.fullName,
+      firstName: currentUser.firstName,
+      lastName: currentUser.lastName,
+      email: currentUser.email,
+      isOwner: currentUser.isOwner.value,
+      profile_photo_url: currentUser.photo ? currentUser.photo.url : null,
+    } %}
+  {{ inertiaShare({currentUser: user}) }}
+{% endcache %}
+{% endif %}

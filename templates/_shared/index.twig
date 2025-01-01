@@ -1,0 +1,5 @@
+{{ inertiaShare({
+flashes: craft.app.session.getAllFlashes(true) ,
+csrfTokenName: craft.app.config.general.csrfTokenName,
+csrfTokenValue: craft.app.request.csrfToken,
+}) }}
