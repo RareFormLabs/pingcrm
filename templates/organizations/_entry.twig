@@ -1,15 +1,15 @@
 {% requireLogin %}
 
 {% set props = [] %}
-{% if element is defined and element.hasErrors %}
-  {% set props = props|merge({ errors: element.getErrors() }) %}
+{% if entry is defined and entry.hasErrors %}
+  {% set props = props|merge({ errors: entry.getErrors() }) %}
 {% endif %}
 
-{% set contacts = craft.entries.section('contacts').relatedTo(element).all() %}
+{% set contacts = craft.entries.section('contacts').relatedTo(entry).all() %}
 {% if contacts|length %}
-  {% set element = element|add('contacts', contacts) %}
+  {% set entry = entry|add('contacts', contacts) %}
 {% endif %}
 
-{% set props = props|merge({ organization: element }) %}
+{% set props = props|merge({ organization: entry }) %}
 
 {{ inertia('Organizations/Edit', props) }}

@@ -1,23 +1,23 @@
 {% requireLogin %}
 
 {% set props = [] %}
-{% if element is defined and element.hasErrors %}
-  {% set props = props|merge({ errors: element.getErrors() }) %}
+{% if entry is defined and entry.hasErrors %}
+  {% set props = props|merge({ errors: entry.getErrors() }) %}
 {% endif %}
 
 {% set props = props|merge({ contact: {
-  firstName: element.firstName,
-  lastName: element.lastName,
-  city: element.city,
-  phone: element.phone,
-  organization: element.organization.select('id').column()|first,
-  state: element.state,
-  postalCode: element.postalCode,
-  email: element.email,
-  country: element.country,
-  address: element.address,
-  id: element.id,
-  status: element.status,
+  firstName: entry.firstName,
+  lastName: entry.lastName,
+  city: entry.city,
+  phone: entry.phone,
+  organization: entry.organization.select('id').column()|first,
+  state: entry.state,
+  postalCode: entry.postalCode,
+  email: entry.email,
+  country: entry.country,
+  address: entry.address,
+  id: entry.id,
+  status: entry.status,
 }}) %}
 
 {% set props = props|merge({

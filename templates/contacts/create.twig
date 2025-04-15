@@ -1,8 +1,8 @@
 {% requireLogin %}
 
 {% set props = { redirect: '/contacts'|hash } %}
-{% if element is defined and element.hasErrors %}
-  {% set props = { errors: element.getErrors() } %}
+{% if entry is defined and entry.hasErrors %}
+  {% set props = { errors: entry.getErrors() } %}
 {% endif %}
 
 {% set props = props|merge({
