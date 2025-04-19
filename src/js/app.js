@@ -1,6 +1,9 @@
 import "./../css/app.css";
 import { createApp, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
+import axios from "axios";
+
+window.axios = axios;
 
 createInertiaApp({
   resolve: (name) => {
