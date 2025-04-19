@@ -50,11 +50,10 @@
 </template>
 
 <script setup>
-import { Head } from "@inertiajs/vue3";
+import { Head, useForm } from "@inertiajs/vue3";
 import Logo from "@/Shared/Logo.vue";
 import TextInput from "@/Shared/TextInput.vue";
 import LoadingButton from "@/Shared/LoadingButton.vue";
-import useForm from "inertia-helper";
 
 const props = defineProps({
   csrfTokenValue: String,

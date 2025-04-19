@@ -60,12 +60,11 @@
 </template>
 
 <script setup>
-import { Head, Link } from "@inertiajs/vue3";
+import { Head, Link, useForm } from "@inertiajs/vue3";
 import Layout from "@/Shared/Layout.vue";
 import TextInput from "@/Shared/TextInput.vue";
 import SelectInput from "@/Shared/SelectInput.vue";
 import LoadingButton from "@/Shared/LoadingButton.vue";
-import useForm from "inertia-helper";
 
 defineOptions({
   layout: Layout,
@@ -82,10 +81,9 @@ const form = useForm({
     isOwner: props.currentUser.isOwner,
   },
   userId: props.currentUser.id,
-  action: "/users/save-user",
 });
 
 const update = () => {
-  form.post("/users/save-user");
+  form.post("users/save-user");
 };
 </script>

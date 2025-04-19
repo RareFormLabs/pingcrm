@@ -164,14 +164,13 @@
 
 <script setup>
 import { defineComponent, toRefs, ref, reactive } from "vue";
-import { Head, Link, router } from "@inertiajs/vue3";
+import { Head, Link, router, useForm } from "@inertiajs/vue3";
 import Icon from "@/Shared/Icon.vue";
 import Layout from "@/Shared/Layout.vue";
 import TextInput from "@/Shared/TextInput.vue";
 import SelectInput from "@/Shared/SelectInput.vue";
 import LoadingButton from "@/Shared/LoadingButton.vue";
 import TrashedMessage from "@/Shared/TrashedMessage.vue";
-import useForm from "inertia-helper";
 
 defineOptions({
   layout: Layout,
@@ -211,7 +210,7 @@ const destroy = () => {
     form
       .transform((data) => ({
         ...data,
-        enabled: false,
+        enabled: 0,
       }))
       .post("entries/save-entry");
   }
