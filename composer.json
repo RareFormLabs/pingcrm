@@ -1,10 +1,9 @@
 {
   "name": "rareform/pingcrm",
-  "version": "1.0.0",
   "description": "PingCRM demo showcasing Inertia.js for Craft CMS",
   "license": "Unlicense",
   "require": {
-    "rareform/craft-inertia": "^1.0.0-alpha.1",
+    "rareform/craft-inertia": "^1.0.0-beta.5",
     "craftcms/cms": "^5.0.0",
     "craftcms/feed-me": "^6.5.0",
     "nystudio107/craft-vite": "^5.0",

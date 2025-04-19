@@ -12,6 +12,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src/js"),
     },
   },
+  server: {
+    cors: true,
+  },
   build: {
     manifest: true,
     outDir: "./web/dist/",
